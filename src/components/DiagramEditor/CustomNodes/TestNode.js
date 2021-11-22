@@ -1,5 +1,7 @@
 import $ from "jquery";
 import draw2d from "draw2d";
+import Connection from "../Connection";
+
 
 export default draw2d.SVGFigure.extend({
     NAME: "TestNode",
@@ -18,10 +20,36 @@ export default draw2d.SVGFigure.extend({
         this.setSVG(this.svg,500);
         this.installEditPolicy(new draw2d.policy.figure.AntSelectionFeedbackPolicy());
 
-        raw2d.command.CommandType
-
     },
 
+    onDrop:function(dropTarget, x, y, shiftKey, ctrlKey)
+    {
+        if(dropTarget instanceof draw2d.Connection) {
+            let oldSource = dropTarget.getSource();
+            let oldTarget = dropTarget.getTarget();
+
+            let insertionSource = this.getOutputPort(0)
+            let insertionTarget = this.getInputPort(0)
+
+            // ensure that oldSource ---> insertionTarget.... insertionSource ------>oldTarget
+            //
+            if (oldSource instanceof draw2d.InputPort){
+                oldSource = dropTarget.getTarget();
+                oldTarget = dropTarget.getSource();
+            }
+
+            let stack = this.getCanvas().getCommandStack();
+
+            let cmd = new draw2d.command.CommandReconnect(dropTarget);
+            cmd.setNewPorts(oldSource, insertionTarget);
+            stack.execute(cmd);
+
+            let additionalConnection = new Connection();
+            cmd = new draw2d.command.CommandConnect(oldTarget, insertionSource);
+            cmd.setConnection(additionalConnection);
+            stack.execute(cmd);
+        }
+    }
     // getSVG: function ()
     // {
     //

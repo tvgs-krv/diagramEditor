@@ -5,6 +5,8 @@ import draw2d from "draw2d";
 import s from "../DiagramEditor/DiagramEditor.module.scss";
 import View from "./View";
 import Connection from "./Connection";
+import DblClickCanvasPolicy from "./CustomNodes/DblClickCanvasPolicy";
+import MyInterceptorPolicy from "./CustomNodes/MyInterceptorPolicy";
 
 
 function DiagramEditor()
@@ -29,6 +31,8 @@ function DiagramEditor()
                 }
             })
         );
+        canvas.installEditPolicy(new DblClickCanvasPolicy());
+        canvas.installEditPolicy(new MyInterceptorPolicy());
         // canvas.installEditPolicy(new draw2d.policy.connection.DragConnectionCreatePolicy({
         //     createConnection: function(){
         //         return new HoverConnection();
