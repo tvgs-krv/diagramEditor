@@ -1,0 +1,51 @@
+.left_bar
+{
+  background-color: var(--bg-toolbar);
+  width: var(--toolbar-height);
+  height: 100vh;
+  top: var(--toolbar-height);
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  z-index: 2;
+  float: left;
+}
+
+.container
+{
+  position: relative;
+  height: var(--toolbar-height);
+  width: 100%;
+  opacity: 1;
+  transition: opacity .3s;
+
+  &:hover
+  {
+    background-color: var(--bg-toolbar-hover);
+
+    .svg_fill
+    {
+      fill: var(--fg-toolbar-hover);
+    }
+  }
+}
+
+.svg_fill
+{
+  fill: var(--fg-toolbar);
+  height: 32px;
+  width: 32px;
+}
+
+.center_btn
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+

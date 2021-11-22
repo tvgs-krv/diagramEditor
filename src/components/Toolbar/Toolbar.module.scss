@@ -1,0 +1,44 @@
+.toolbar_view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: var(--toolbar-height);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  z-index: 8;
+  color: #fff;
+  background-color: var(--bg-toolbar);
+}
+
+.first_button {
+  position: relative;
+  width: var(--toolbar-height);
+  opacity: 1;
+  transition: opacity .3s;
+
+  &:hover {
+    background-color: var(--bg-toolbar-hover);
+    .svg_fill {
+      fill: var(--fg-toolbar-hover);
+    }
+  }
+}
+
+.svg_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.svg_fill {
+  fill: var(--fg-toolbar);
+  height: 32px;
+  width: 32px;
+}

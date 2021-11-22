@@ -1,0 +1,25 @@
+.left_panel {
+  background-color: var(--fg-toolbar);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  float: left;
+  width: var(--sidebar_width);
+  height: 100vh;
+}
+
+.palette_node_element {
+  border: 1px solid green;
+  background-color: #f3f3f3;
+  padding: 10px;
+  cursor: move;
+  width: 80px;
+  margin: 30px auto 30px auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/*# sourceMappingURL=LeftPanel.module.css.map */
