@@ -28,14 +28,15 @@ export default draw2d.SVGFigure.extend({
             let oldSource = dropTarget.getSource();
             let oldTarget = dropTarget.getTarget();
 
+            debugger
             let insertionSource = this.getOutputPort(0)
             let insertionTarget = this.getInputPort(0)
 
             // ensure that oldSource ---> insertionTarget.... insertionSource ------>oldTarget
             //
             if (oldSource instanceof draw2d.InputPort){
-                oldSource = dropTarget.getTarget();
-                oldTarget = dropTarget.getSource();
+                oldSource = dropTarget.getSource();
+                oldTarget = dropTarget.getTarget();
             }
 
             let stack = this.getCanvas().getCommandStack();
@@ -45,9 +46,10 @@ export default draw2d.SVGFigure.extend({
             stack.execute(cmd);
 
             let additionalConnection = new Connection();
-            cmd = new draw2d.command.CommandConnect(oldTarget, insertionSource);
-            cmd.setConnection(additionalConnection);
-            stack.execute(cmd);
+            let cmd2 = new draw2d.command.CommandConnect(oldTarget, insertionSource);
+            console.log(oldTarget, insertionSource)
+            cmd2.setConnection(additionalConnection);
+            stack.execute(cmd2);
         }
     }
     // getSVG: function ()
