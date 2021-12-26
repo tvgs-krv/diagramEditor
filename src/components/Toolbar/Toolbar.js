@@ -1,6 +1,10 @@
 import React, {useEffect, useRef, useState} from "react";
 import style from "./Toolbar.module.scss";
 import {ReactComponent as MenuIcon} from "../../Images/Svg/extended_menu.svg";
+import {ReactComponent as SaveIcon} from "../../Images/Svg/save-regular.svg";
+import {ReactComponent as UndoIcon} from "../../Images/Svg/undo-alt-solid.svg";
+import {ReactComponent as RedoIcon} from "../../Images/Svg/redo-alt-solid.svg";
+import {ReactComponent as DownloadIcon} from "../../Images/Svg/download-solid.svg";
 import {ReactComponent as UserLogo} from "../../Images/Svg/user-circle-solid.svg";
 
 let showUserMenu=()=>{
@@ -24,7 +28,22 @@ function Toolbar() {
                 </div>
                 <div className={style.first_button}>
                     <span className={style.svg_container}>
-                        <MenuIcon className={style.svg_fill}/>
+                        <SaveIcon className={style.svg_fill}/>
+                    </span>
+                </div>
+                <div className={style.first_button}>
+                    <span className={style.svg_container}>
+                        <UndoIcon className={style.svg_fill}/>
+                    </span>
+                </div>
+                <div className={style.first_button}>
+                    <span className={style.svg_container}>
+                        <RedoIcon className={style.svg_fill}/>
+                    </span>
+                </div>
+                <div className={style.first_button}>
+                    <span className={style.svg_container}>
+                        <DownloadIcon className={style.svg_fill}/>
                     </span>
                 </div>
             </div>
