@@ -15,7 +15,9 @@
   color: #fff;
   background-color: var(--bg-toolbar);
 }
-
+.group_button{
+  display: flex;
+}
 .first_button {
   position: relative;
   width: var(--toolbar-height);
@@ -24,11 +26,27 @@
 
   &:hover {
     background-color: var(--bg-toolbar-hover);
+
     .svg_fill {
       fill: var(--fg-toolbar-hover);
     }
   }
 }
+
+.save_button {
+  display: flex;
+  width: var(--toolbar-height);
+  opacity: 1;
+  transition: opacity .3s;
+  &:hover {
+    background-color: var(--bg-toolbar-hover);
+
+    .svg_fill {
+      fill: var(--fg-toolbar-hover);
+    }
+  }
+}
+
 
 .svg_container {
   position: absolute;
@@ -41,4 +59,72 @@
   fill: var(--fg-toolbar);
   height: 32px;
   width: 32px;
+}
+
+.main_menu {
+  border: 2px solid black;
+  width: 100px;
+  height: 100px;
+  z-index: 20;
+  position: absolute;
+  background: yellow;
+  top: calc(var(--toolbar-height) + var(--context_menu_offset));
+  left: calc(var(--toolbar-height) + var(--context_menu_offset));
+}
+
+.profile_menu {
+  ul {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    margin: 0;
+  }
+  a {
+    display: block;
+    color: var(--fg-toolbar-hover);
+    text-decoration: none;
+    background: var(--bg-toolbar);
+    padding: 8px;
+    white-space: nowrap;
+  }
+  a:hover {
+    background: var(--bg-toolbar-hover);
+  }
+  li {
+    position: relative;
+  }
+  li:hover .profile_sub_menu {
+    display: flex;
+  }
+  .profile_menu_user_logo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 8px;
+
+    transition: opacity .3s;
+    &:hover {
+      background-color: var(--bg-toolbar-hover);
+      .svg_fill {
+        fill: var(--fg-toolbar-hover);
+      }
+    }
+
+  }
+  .profile_sub_menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+  }
+  .logo_fill {
+    fill: var(--fg-toolbar);
+    height: 32px;
+    width: 32px;
+    padding-right: 10px;
+  }
+}
+.project_name{
+  display: flex;
+  align-items: center;
+  padding: 8px;
 }
