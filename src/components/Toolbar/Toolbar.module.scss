@@ -18,36 +18,18 @@
 .group_button{
   display: flex;
 }
-.first_button {
+.common_button {
   position: relative;
   width: var(--toolbar-height);
   opacity: 1;
   transition: opacity .3s;
-
   &:hover {
     background-color: var(--bg-toolbar-hover);
-
     .svg_fill {
       fill: var(--fg-toolbar-hover);
     }
   }
 }
-
-.save_button {
-  display: flex;
-  width: var(--toolbar-height);
-  opacity: 1;
-  transition: opacity .3s;
-  &:hover {
-    background-color: var(--bg-toolbar-hover);
-
-    .svg_fill {
-      fill: var(--fg-toolbar-hover);
-    }
-  }
-}
-
-
 .svg_container {
   position: absolute;
   left: 50%;
