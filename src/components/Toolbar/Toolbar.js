@@ -21,27 +21,27 @@ function Toolbar() {
     return (
         <div className={style.toolbar_view}>
             <div className={style.group_button}>
-                <div className={style.first_button}>
+                <div className={style.common_button}>
                     <span className={style.svg_container}>
                         <MenuIcon className={style.svg_fill}/>
                     </span>
                 </div>
-                <div className={style.first_button}>
+                <div className={style.common_button}>
                     <span className={style.svg_container}>
                         <SaveIcon className={style.svg_fill}/>
                     </span>
                 </div>
-                <div className={style.first_button}>
+                <div className={style.common_button}>
                     <span className={style.svg_container}>
                         <UndoIcon className={style.svg_fill}/>
                     </span>
                 </div>
-                <div className={style.first_button}>
+                <div className={style.common_button}>
                     <span className={style.svg_container}>
                         <RedoIcon className={style.svg_fill}/>
                     </span>
                 </div>
-                <div className={style.first_button}>
+                <div className={style.common_button}>
                     <span className={style.svg_container}>
                         <DownloadIcon className={style.svg_fill}/>
                     </span>

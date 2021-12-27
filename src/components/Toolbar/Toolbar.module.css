@@ -16,16 +16,16 @@
   background-color: var(--bg-toolbar);
 }
 
-.first_button {
+.common_button {
   position: relative;
   width: var(--toolbar-height);
   opacity: 1;
   transition: opacity 0.3s;
 }
-.first_button:hover {
+.common_button:hover {
   background-color: var(--bg-toolbar-hover);
 }
-.first_button:hover .svg_fill {
+.common_button:hover .svg_fill {
   fill: var(--fg-toolbar-hover);
 }
 
