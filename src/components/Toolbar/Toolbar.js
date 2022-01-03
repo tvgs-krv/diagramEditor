@@ -13,7 +13,7 @@ let showUserMenu = () => {
     console.log("test")
 }
 
-function Toolbar() {
+const Toolbar = () => {
     const [width, setWidth] = useState(0);
     const profileMenuRef = useRef(null);
     const [active, setActive] = useState(false);
@@ -78,6 +78,6 @@ function Toolbar() {
 
         </div>
     )
-}
+};
 
 export default Toolbar

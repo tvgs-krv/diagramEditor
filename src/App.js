@@ -15,15 +15,13 @@ window.$ = window.jQuery = jquery;
 window.draw2d = draw2d;
 window.Connection = Connection;
 
-function App() {
-    return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<DiagramEditorPage/>}/>
-                <Route path="/profile" element={<ProfilePage/>}/>
-            </Routes>
-        </Router>
-    );
-}
+const App = () => (
+    <Router>
+        <Routes>
+            <Route path="/" element={<DiagramEditorPage/>}/>
+            <Route path="/profile" element={<ProfilePage/>}/>
+        </Routes>
+    </Router>
+);
 
 export default App;

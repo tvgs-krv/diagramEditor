@@ -9,8 +9,7 @@ import DblClickCanvasPolicy from "./CustomNodes/DblClickCanvasPolicy";
 import MyInterceptorPolicy from "./CustomNodes/MyInterceptorPolicy";
 
 
-function DiagramEditor()
-{
+const DiagramEditor = () => {
     let diagramEditorCanvas;
     let appLayout;
     // mouse drag related variables
@@ -133,6 +132,6 @@ function DiagramEditor()
                 // onMouseUp={function(e){handleMouseUp(e);}}
                 // onMouseOut={function(e){handleMouseOut(e);}}
     />;
-}
+};
 
 export default DiagramEditor;

@@ -12,20 +12,18 @@ import {ReactComponent as DiagramIcon} from "../../Images/Svg/diagram_icon.svg";
 
 window.$ = window.jQuery = jquery;
 
-function LeftPanel() {
-    return (
-        <div className={s.left_panel}>
-            <div id="navigation" className="">
-                <CommonValve data-shape="CommonValve" className={s.common_item + " draw2d_droppable"}/>
-                <div data-shape="shape2"
-                     className={s.palette_node_element + ' ' + "draw2d_droppable"}>End
-                </div>
-                <div data-shape="shape3"
-                     className={s.palette_node_element + ' ' + "draw2d_droppable"}>Between
-                </div>
+const LeftPanel = () => (
+    <div className={s.left_panel}>
+        <div id="navigation" className="">
+            <CommonValve data-shape="CommonValve" className={s.common_item + " draw2d_droppable"}/>
+            <div data-shape="shape2"
+                 className={s.palette_node_element + ' ' + "draw2d_droppable"}>End
+            </div>
+            <div data-shape="shape3"
+                 className={s.palette_node_element + ' ' + "draw2d_droppable"}>Between
             </div>
         </div>
-    )
-}
+    </div>
+);
 
 export default LeftPanel
