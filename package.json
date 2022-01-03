@@ -28,6 +28,7 @@
     "react": "*",
     "react-dom": "*",
     "react-flow-renderer": "*",
+    "react-router-dom": "^6.2.1",
     "react-scripts": "*",
     "resize-observer-polyfill": "*",
     "v6": "^0.0.0",
