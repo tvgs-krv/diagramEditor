@@ -24,7 +24,8 @@ let View = draw2d.Canvas.extend({
     {
         let type = $(droppedDomNode).data("shape");
         let figure = null;
-        if (type === "shape1")
+        //todo Тут надо придумать какой то общий класс, куда передавать просто дом элемент
+        if (type === "CommonValve")
         {
             figure = new TestNode()
         }
