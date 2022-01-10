@@ -59,7 +59,7 @@ const Toolbar = () => {
                     <li>
                         <div ref={profileMenuRef} className={style.profile_menu_user_logo} onClick={showUserMenu}>
                             <UserLogo className={style.logo_fill}/>
-                            Роман Коваленко
+                            Зинаид Евкакьевич
                         </div>
                         <ul className={style.profile_sub_menu}>
                             <li><Link to="/profile" style={{width: width + 'px'}} >Профиль</Link>
