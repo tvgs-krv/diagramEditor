@@ -15,7 +15,11 @@ window.$ = window.jQuery = jquery;
 const LeftPanel = () => (
     <div className={s.left_panel}>
         <div id="navigation" className="">
-            <CommonValve data-shape="CommonValve" className={s.common_item + " draw2d_droppable"}/>
+            <div className={s.common_item_before}>
+                <div className={s.common_item}>
+                    <CommonValve data-shape="CommonValve" className="draw2d_droppable"/>
+                </div>
+            </div>
             <div data-shape="shape2"
                  className={s.palette_node_element + ' ' + "draw2d_droppable"}>End
             </div>
