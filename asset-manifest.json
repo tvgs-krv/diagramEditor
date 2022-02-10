@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.74dc486a.css",
-    "main.js": "./static/js/main.13a09040.js",
+    "main.js": "./static/js/main.b5264127.js",
     "static/media/initial_data_icon.svg": "./static/media/initial_data_icon.39b1aae19831a441c88124f9eac42a35.svg",
     "static/media/car-alt-solid.svg": "./static/media/car-alt-solid.e98e83aa3609c5f4b8d2eb3ae28da2d9.svg",
     "static/media/angle-double-down-solid.svg": "./static/media/angle-double-down-solid.07c1c09f6fa03b3b4ed6727d48d01852.svg",
@@ -15,10 +15,10 @@
     "static/media/user-circle-solid.svg": "./static/media/user-circle-solid.d9ff28da0b5c81d414271e564ca2d495.svg",
     "static/media/common_valve.svg": "./static/media/common_valve.cc8120e8081a90c5f700d993e34bdfb4.svg",
     "main.74dc486a.css.map": "./static/css/main.74dc486a.css.map",
-    "main.13a09040.js.map": "./static/js/main.13a09040.js.map"
+    "main.b5264127.js.map": "./static/js/main.b5264127.js.map"
   },
   "entrypoints": [
     "static/css/main.74dc486a.css",
-    "static/js/main.13a09040.js"
+    "static/js/main.b5264127.js"
   ]
 }
