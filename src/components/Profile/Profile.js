@@ -6,7 +6,7 @@ const Profile = () => {
 
     const data = {
         id: 1,
-        name: "Зинаид Евкакьевич",
+        name: "Имя Фамилия",
         image: {
             url: "https://mir-s3-cdn-cf.behance.net/project_modules/fs/8c8ecf23475771.56323fdddcb3d.jpg",
             alt: "Ваше фото"
