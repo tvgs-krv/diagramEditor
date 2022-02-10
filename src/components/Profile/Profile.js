@@ -40,7 +40,6 @@ const Profile = () => {
                 <div className={s.profile_link}><a href="#">Сервисы</a></div>
                 <div className={s.profile_link}><a href="#">Проекты</a></div>
                 <div className={s.profile_link}><a href="#">Настройки</a></div>
-                <div className={s.profile_link}><a href="#">Крендельки</a></div>
             </div>
             <div className={s.profile_content} projects = {getData.projects}>
                 Content
