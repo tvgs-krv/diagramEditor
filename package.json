@@ -2,6 +2,7 @@
   "name": "untitled1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://tvgs-krv.github.io/diagramEditor/",
   "devDependencies": {
     "sass-loader": "^12.3.0"
   },
@@ -15,6 +16,7 @@
     "closest": "*",
     "dagre": "*",
     "draw2d": "^1.0.38",
+    "gh-pages": "^3.2.3",
     "import-jquery": "^1.0.1",
     "jquery": "^3.6.0",
     "jquery-layout": "^1.0.0",
@@ -39,7 +41,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
