@@ -1,10 +1,10 @@
 import React, {useEffect, useRef, useState} from "react";
-import s from "./Projects.module.scss"
 
-const Profile = ({projects}) => {
-    return(
+const Projects = () => {
+    return (
         <div>
-
+            <h2>CONTAXT</h2>
         </div>
     )
 }
+export default Projects;
