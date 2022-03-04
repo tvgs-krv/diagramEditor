@@ -1,5 +1,9 @@
 import React, {useEffect, useRef, useState} from "react";
 import s from "./Profile.module.scss"
+import Projects from "./Projects/Projects";
+import {NavLink, Route, Routes} from "react-router-dom";
+import Sidebar from "./Sidebar/Sidebar";
+import Settings from "./Settings/Settings";
 
 
 const Profile = () => {
@@ -33,18 +37,15 @@ const Profile = () => {
     const [getData, setData] = useState(data);
 
     return (
-        <div>
-            <div className={s.profile_sidebar}>
-                <div className={s.photo}><img src={getData.image.url} alt={getData.image.alt}/></div>
-                <div className={s.name}><span>{getData.name.toUpperCase()}</span></div>
-                <div className={s.profile_link}><a href="#">Сервисы</a></div>
-                <div className={s.profile_link}><a href="#">Проекты</a></div>
-                <div className={s.profile_link}><a href="#">Настройки</a></div>
+        <>
+            <Sidebar url={data.image.url} alt={data.image.alt} name={data.name}/>
+            <div className={s.profile_content}>
+                <Routes>
+                    <Route path="/projects" element={<Projects/>}/>
+                    <Route path="/settings" element={<Settings/>}/>
+                </Routes>
             </div>
-            <div className={s.profile_content} projects = {getData.projects}>
-                Content
-            </div>
-        </div>
+        </>
     )
 }
 
